@@ -162,32 +162,5 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 ├── SETUP.md                          # Environment setup instructions
 └── changelog.md                      # History of premium upgrades
 ```
-
----
-
-## 🚀 Getting Started
-
-### 1. Requirements
-- Flutter SDK (Latest Stable)
-- Android Studio / VS Code
-- Firebase Project (configured via `flutterfire`)
-
-### 2. Deployment
-1.  **Install**: Run `flutter pub get`.
-2.  **Configuration**: 
-    - Copy `lib/config/api_config.example.dart` to `lib/config/api_config.dart`.
-    - Populate `geminiApiKey` (from AI Studio) and `spoonacularApiKey`.
-3.  **Identity**: Run `flutterfire configure` to link your Firebase project.
-4.  **Launch**: Run `flutter run`.
-
----
-
-## 🚀 Deployment
-
-FoodGapp is optimized for Android production. To generate a signed APK or App Bundle:
-1.  Review the [Production Release Guide](RELEASE.md).
-2.  Configure your local `key.properties`.
-3.  Execute `flutter build apk --release`.
-
 ---
 *FoodGapp: Elevating Filipino health through Intelligent Nutrition.*
