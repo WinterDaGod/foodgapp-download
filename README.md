@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center;">
   <img src="assets/icon.png" width="128" height="128" alt="FoodGapp Logo">
   <h1>FoodGapp</h1>
   <p><strong>Eat Better, Track Smarter</strong></p>
@@ -22,8 +22,9 @@ FoodGapp is a high-fidelity Android application engineered for the Philippine co
 ### 🧠 1. Intelligent Orchestration
 Powered by advanced **Natural Language Processing (NLP)**, the app acts as a 24/7 personal dietitian:
 *   **Precision AI Planner**: Generates calorie-matched daily and weekly schedules with high-accuracy 25/35/40 orchestration.
+*   **Interactive Performance Strip**: A dynamic calendar tracker that visualizes daily goal compliance via technical progress rings.
 *   **AI Pantry Chef**: Invent creative recipes using only the ingredients currently in your kitchen.
-*   **NLP Quick Paste**: Log entire meals by simply describing them (e.g., *"2 scrambled eggs and a cup of coffee"*).
+*   **Liquid Glass Quick Log**: A sophisticated, high-density Glassmorphism interface for logging food via NLP, Photo, or Manual entry.
 *   **AI-First Discovery**: Semantic search capabilities for goal-specific discovery (e.g., *"Quick post-workout high-protein snack"*).
 
 ### 🥗 2. Precision Nutrition
@@ -165,3 +166,42 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 ├── TESTING_GUIDE.md                  # QA and verification protocol
 └── changelog.md                      # History of premium upgrades
 ```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Requirements
+- Flutter SDK (Latest Stable)
+- Android Studio / VS Code
+- Firebase Project (configured via `flutterfire`)
+
+### 2. Deployment
+1.  **Install**: Run `flutter pub get`.
+2.  **Configuration**: 
+    - Create `lib/config/api_config.dart`.
+    - Populate `geminiApiKey` (from AI Studio) and `spoonacularApiKey`.
+3.  **Identity**: Run `flutterfire configure` to link your Firebase project.
+4.  **Launch**: Run `flutter run`.
+
+---
+
+## 🚀 Deployment
+
+FoodGapp is optimized for Android production. To generate a signed APK or App Bundle:
+1.  Review the [Production Release Guide](RELEASE.md).
+2.  Configure your local `key.properties`.
+3.  Execute `flutter build apk --release`.
+
+---
+
+## 🧪 Quality Assurance
+
+To ensure the highest standards of reliability and accuracy, refer to the [QA Testing Guide](TESTING_GUIDE.md) for comprehensive verification protocols covering:
+- AI Mathematical Precision
+- Offline Fail-over Logic
+- Biometric Data Accuracy
+- Visual and Haptic Fidelity
+
+---
+*FoodGapp: Elevating Filipino health through Intelligent Nutrition.*
