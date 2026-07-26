@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/icon.png" width="128" height="128" alt="FoodGapp Logo">
   <h1>FoodGapp</h1>
-  <p><strong>Eat Better, Track Smarter/strong></p>
+  <p><strong>Eat Better, Track Smarter</strong></p>
 
   [![Flutter](https://img.shields.io/badge/Flutter-v3.22+-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
   [![Dart](https://img.shields.io/badge/Dart-v3.4+-0175C2?logo=dart&logoColor=white)](https://dart.dev)
@@ -21,9 +21,9 @@ FoodGapp is a high-fidelity Android application engineered for the Philippine co
 
 ### 🧠 1. Intelligent Orchestration
 Powered by advanced **Natural Language Processing (NLP)**, the app acts as a 24/7 personal dietitian:
-*   **Smart AI Planner**: Automatically generates calorie-matched daily and weekly schedules.
+*   **Precision AI Planner**: Generates calorie-matched daily and weekly schedules with high-accuracy 25/35/40 orchestration.
 *   **AI Pantry Chef**: Invent creative recipes using only the ingredients currently in your kitchen.
-*   **Natural Language Logging**: Log entire meals by simply describing them in plain English.
+*   **NLP Quick Paste**: Log entire meals by simply describing them (e.g., *"2 scrambled eggs and a cup of coffee"*).
 *   **AI-First Discovery**: Semantic search capabilities for goal-specific discovery (e.g., *"Quick post-workout high-protein snack"*).
 
 ### 🥗 2. Precision Nutrition
@@ -47,12 +47,12 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 
 | Module | Status | Highlights |
 | :--- | :---: | :--- |
-| **Authentication** | 🟢 | Firebase Auth, Custom Onboarding, Biometric Profiles. |
-| **AI Engine** | 🟢 | Smart Planning, Pantry Chef, NLP Meal Logging. |
-| **Data Layer** | 🟢 | v17 SQLite Schema, Aisle Caching, Nutritional Snapshotting. |
+| **Authentication** | 🟢 | Firebase Auth, Password Strength UX, Biometric Profiles. |
+| **AI Engine** | 🟢 | AI-First Orchestration, Pantry Chef, NLP Quick Paste. |
+| **Data Layer** | 🟢 | v19 Schema, High-Speed Indexing, Bulk Data Processing. |
 | **Analytics** | 🟢 | DOST-FNRI Feedback, Weight Journey, BMI Gauge. |
-| **UX/UI** | 🟢 | Liquid-Fluid Animations, Haptic Feedback, Multi-select Filtering. |
-| **Reliability** | 🟢 | 4-Tier Fallback Gateway, Offline Local Library. |
+| **UX/UI** | 🟢 | Fluid Animations, Haptic Feedback, Enhanced List Controls. |
+| **Reliability** | 🟢 | 4-Tier Fallback Gateway, Instant "Saved" Loading. |
 
 ---
 
@@ -64,7 +64,7 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 | **Framework** | Flutter (Android-Native Optimized) |
 | **Language** | Dart 3.4+ |
 | **AI Services** | FoodGapp AI Engine (NLP & Computer Vision ready) |
-| **Persistence** | SQLite (`sqflite`) - v17 Schema |
+| **Persistence** | SQLite (`sqflite`) - v19 Schema |
 | **Identity** | Firebase Authentication |
 | **API Sources** | Spoonacular, USDA FoodData Central, TheMealDB |
 
@@ -89,8 +89,7 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 .
 ├── lib/
 │   ├── config/
-│   │   ├── api_config.dart           # Real API keys (gitignored)
-│   │   └── api_config.example.dart   # Template for local setup
+│   │   └── api_config.dart           # Real API keys (gitignored)
 │   ├── models/
 │   │   ├── daily_nutrition.dart      # Aggregated daily intake data
 │   │   ├── fasting_session.dart      # Fasting tracking data
@@ -113,6 +112,7 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 │   │   │   ├── app_logo.dart         # Official FoodGapp branding widget
 │   │   │   ├── app_toast.dart        # Custom notification system
 │   │   │   ├── dashboard_widgets.dart# Macro and calorie visualisations
+│   │   │   ├── describe_meal_modal.dart # NLP Natural Language entry
 │   │   │   ├── expandable_fab.dart   # Interactive global action button
 │   │   │   ├── quick_add_menu.dart   # 9-action high-speed menu
 │   │   │   ├── recipe_widgets.dart   # Discovery and detail card views
@@ -138,7 +138,7 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 │   ├── services/
 │   │   ├── api/                      # REST & AI Implementations
 │   │   │   ├── api_exceptions.dart   # Centralised error handling
-│   │   │   ├── gemini_service.dart   # Core FoodGapp AI Engine
+│   │   │   ├── foodgapp_ai_service.dart # Core FoodGapp AI Engine
 │   │   │   ├── spoonacular_service.dart # Primary recipe database
 │   │   │   ├── the_meal_db_service.dart # Emergency backup database
 │   │   │   └── usda_service.dart     # Official nutritional verification
@@ -160,7 +160,8 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 ├── pubspec.yaml                      # Dependencies and configuration
 ├── README.md                         # This documentation
 ├── SETUP.md                          # Environment setup instructions
+├── RELEASE.md                        # Production deployment guide
+├── RELEASES.md                       # Historical release descriptions
+├── TESTING_GUIDE.md                  # QA and verification protocol
 └── changelog.md                      # History of premium upgrades
 ```
----
-*FoodGapp: Elevating Filipino health through Intelligent Nutrition.*
