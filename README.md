@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/icon.png" width="128" height="128" alt="FoodGapp Logo">
+  <img src="assets/app_icon_v2.png" width="128" height="128" alt="FoodGapp Logo">
 </p>
 
-<h1 align="center">FoodGapp</h1>
+<h1 align="center">FoodGapp v1.1.8</h1>
 
 <p align="center">
   <strong>Eat Better, Track Smarter</strong>
@@ -18,6 +18,9 @@
   <a href="https://www.android.com">
     <img src="https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white" alt="Android">
   </a>
+  <a href="https://www.apple.com/ios">
+    <img src="https://img.shields.io/badge/Platform-iOS-000000?logo=apple&logoColor=white" alt="iOS">
+  </a>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
   </a>
@@ -27,7 +30,7 @@
 
 ## 📖 Overview
 
-FoodGapp is a high-fidelity Android application engineered for the Philippine context, integrating the **FoodGapp AI Engine** to deliver a personalized, resilient, and data-driven nutrition experience. By combining official **DOST-FNRI** standards with modern Generative AI, FoodGapp transforms complex nutritional data into actionable daily habits.
+FoodGapp is a high-fidelity, cross-platform nutrition application engineered for the Philippine context, integrating the **FoodGapp AI Engine** to deliver a personalized, resilient, and data-driven experience on both Android and iOS. By combining official **DOST-FNRI** standards with modern Generative AI, FoodGapp transforms complex nutritional data into actionable daily habits.
 
 ---
 
@@ -35,6 +38,7 @@ FoodGapp is a high-fidelity Android application engineered for the Philippine co
 
 ### 🧠 1. Intelligent Orchestration
 Powered by advanced **Natural Language Processing (NLP)**, the app acts as a 24/7 personal dietitian:
+*   **Titan Offline Library**: Instant access to a massive **50,000-item** local database featuring PhilFCT (DOST-FNRI) and USDA clinical data.
 *   **Precision AI Planner**: Generates calorie-matched daily and weekly schedules with high-accuracy 25/35/40 orchestration.
 *   **Interactive Performance Strip**: A dynamic calendar tracker that visualizes daily goal compliance via technical progress rings.
 *   **AI Pantry Chef**: Invent creative recipes using only the ingredients currently in your kitchen.
@@ -48,10 +52,10 @@ A commitment to data accuracy and local relevance:
 *   **Fluid Bio-Tracking**: Premium interactive tracking for hydration, intermittent fasting stages, and weight journey milestones.
 
 ### 🛡️ 3. Architectural Resilience
-Engineered for "Zero-Downtime" discovery through a proprietary 4-layer data gateway:
+Engineered for "Zero-Downtime" discovery through a proprietary 4-layer data gateway and self-healing systems:
 1.  **Primary**: FoodGapp AI for bespoke creativity.
 2.  **Verified Database**: Spoonacular (USDA-linked) for clinical standards.
-3.  **Backup Source**: TheMealDB for rapid, basic discovery.
+3.  **Local Titan Library**: 50,000+ pre-indexed items for instant offline discovery.
 4.  **Local Snapshot**: Personal on-device library for instant offline access.
 
 ---
@@ -64,10 +68,11 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 | :--- | :---: | :--- |
 | **Authentication** | 🟢 | Firebase Auth, Password Strength UX, Biometric Profiles. |
 | **AI Engine** | 🟢 | AI-First Orchestration, Pantry Chef, NLP Quick Paste. |
-| **Data Layer** | 🟢 | v19 Schema, High-Speed Indexing, Bulk Data Processing. |
+| **Data Layer** | 🟢 | v25 Self-Healing Schema, 50k Titan Library, Bulk Processing. |
 | **Analytics** | 🟢 | DOST-FNRI Feedback, Weight Journey, BMI Gauge. |
 | **UX/UI** | 🟢 | Fluid Animations, Haptic Feedback, Enhanced List Controls. |
 | **Reliability** | 🟢 | 4-Tier Fallback Gateway, Instant "Saved" Loading. |
+| **Cross-Platform**| 🟢 | Cloud-built iOS support (iPhone 16e certified). |
 
 ---
 
@@ -79,7 +84,7 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 | **Framework** | Flutter (Android-Native Optimized) |
 | **Language** | Dart 3.4+ |
 | **AI Services** | FoodGapp AI Engine (NLP & Computer Vision ready) |
-| **Persistence** | SQLite (`sqflite`) - v19 Schema |
+| **Persistence** | SQLite (`sqflite`) - v25 Self-Healing Schema |
 | **Identity** | Firebase Authentication |
 | **API Sources** | Spoonacular, USDA FoodData Central, TheMealDB |
 
@@ -95,6 +100,8 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 | `fasting_log` | Session management and biological stage tracking. |
 | `water_log` | Persistent daily hydration metrics. |
 | `shopping_list` | Dynamic checklist with quantity support and recipe merging. |
+| `food_library` | Massive 50,000-item pre-indexed high-fidelity food database. |
+| `active_meal_plan` | Persistent storage for currently active daily and weekly plans. |
 
 ---
 
@@ -180,6 +187,32 @@ FoodGapp is currently in a **Feature-Complete, High-Fidelity state** for its ini
 ├── TESTING_GUIDE.md                  # QA and verification protocol
 └── changelog.md                      # History of premium upgrades
 ```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Requirements
+- Flutter SDK (Latest Stable)
+- Android Studio / VS Code
+- Firebase Project (configured via `flutterfire`)
+
+### 2. Deployment
+1.  **Install**: Run `flutter pub get`.
+2.  **Configuration**: 
+    - Create `lib/config/api_config.dart`.
+    - Populate `geminiApiKey` (from AI Studio) and `spoonacularApiKey`.
+3.  **Identity**: Run `flutterfire configure` to link your Firebase project.
+4.  **Launch**: Run `flutter run`.
+
+---
+
+## 🚀 Deployment
+
+FoodGapp is optimized for Android production. To generate a signed APK or App Bundle:
+1.  Review the [Production Release Guide](RELEASE.md).
+2.  Configure your local `key.properties`.
+3.  Execute `flutter build apk --release`.
 
 ---
 
